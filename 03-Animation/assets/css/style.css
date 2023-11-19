@@ -1,0 +1,74 @@
+/*p1.html*/
+.commonAnimation{
+    padding:30px;
+    border-radius: 5px;
+    margin:30px;
+    height:300px;
+}
+.animation1{
+    background:crimson;
+    /*animation:be-practical;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; */
+    animation:be-practical 5s infinite;
+}
+.animation1>h1,.animation2>h1,.animation3>h1{
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000;
+}
+@keyframes be-practical{
+    from{  background: linear-gradient(to top, #1e9600, #fff200, #ff0000);}
+    to{  background: linear-gradient(to left, #da4453, #89216b);}  /*use ui gradients.com website*/
+}
+/*.animation1:hover{
+    background: #89216b;
+}  this code does not work because keyframes is working*/
+
+/*p2.html*/
+.animation2{
+    background: url(../images/tablet.jpg) no-repeat center;
+    background-size: 100%;
+    color:#fff;
+    animation:animation_image 10s infinite;
+}
+@keyframes animation_image{
+    from{background: url(../images/tablet.jpg)no-repeat top; color:red}
+    to{background: url(../images/mobile.jpg) no-repeat bottom; color:green}
+}
+/*p3.html*/
+.animation3{
+    background:#89216b;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 5px;
+    position:absolute;
+    animation:cssAnimation3 10s infinite;
+}
+@keyframes cssAnimation3 {
+    0%{
+        top:0px;
+        left:0px;
+        background-color: #fff200;
+    }
+    25%{
+        top:0px;
+        left:600px;
+        background-color: #1e9600;
+    }
+    50%{
+        top:400px;
+        left:600px;
+        background-color:aqua;
+    }
+    75%{
+        top:400px;
+        left:0px;
+        background-color: #ff0000;
+    }
+    100%{
+        top:0px;
+        left:0px;
+        background-color: #fff200;
+    }
+}
